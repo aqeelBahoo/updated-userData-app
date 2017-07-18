@@ -1,0 +1,22 @@
+<div class="w3-animate-opacity">
+    <table class="w3-table-all w3-hoverable" >
+        <tr style="background-color: #8ac4ef">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Date</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="user in userData track by $index"  >
+        <td ng-bind="user.firstName"></td>
+        <td ng-bind="user.lastName"></td>
+        <td ng-bind="user.email"></td>
+        <td ng-bind="user.phone"></td>
+        <td ng-bind="user.d"></td>
+        <td ng-click="remove($index)" ><span class="fa fa-trash"></span></td>
+        <td ng-click="edit($index)"><span class="fa fa-pencil"></span></td>
+        </tr>
+    </table>
+</div>
